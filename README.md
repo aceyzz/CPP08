@@ -2,7 +2,7 @@
 
 <br>
 
-### Sujet : Exercice 00 - "Easy find"
+### Exercice 00 - "Easy find"
 
 #### Objectif :
 
@@ -31,7 +31,7 @@ Ces tests valident le fonctionnement correct de `easyfind`, capable de gérer ef
 <br>
 
 
-### Sujet : Exercice 01 - "Span"
+### Exercice 01 - "Span"
 
 #### Objectif :
 Le but est de créer une classe `Span` capable de stocker jusqu'à `N` entiers, où `N` est un entier non signé passé au constructeur. Cette classe doit gérer l'ajout de nombres via la méthode `addNumber`, et calculer le plus petit (`shortestSpan`) et le plus grand écart (`longestSpan`) entre ses éléments. Toute tentative d'ajout au-delà de la capacité maximale lève une exception.
@@ -59,7 +59,7 @@ Les tests démontrent l'utilisation de `Span` avec des séries de nombres, y com
 
 <br>
 
-### Sujet : Exercice 02 - "Abomination mutante"
+### Exercice 02 - "Abomination mutante"
 
 #### Objectif :
 L'objectif de cet exercice est de remédier à l'absence d'itérabilité du conteneur `std::stack` en le rendant itérable. Pour ce faire, vous allez implémenter une classe `MutantStack` qui hérite de `std::stack` et lui ajoute des itérateurs.
