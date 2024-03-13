@@ -2,7 +2,12 @@
 
 <br>
 
+---
+
 ### Exercice 00 - "Easy find"
+
+<details>
+  <summary>Afficher/Masquer</summary>
 
 #### Objectif :
 
@@ -24,6 +29,8 @@ Le but est de créer une fonction modèle `easyfind` qui prend un type de conten
 
 Ces tests valident le fonctionnement correct de `easyfind`, capable de gérer efficacement la recherche dans divers conteneurs d'entiers et de signaler adéquatement quand un élément n'est pas trouvé.
 
+</details>
+
 <br>
 
 ---
@@ -32,6 +39,9 @@ Ces tests valident le fonctionnement correct de `easyfind`, capable de gérer ef
 
 
 ### Exercice 01 - "Span"
+
+<details>
+  <summary>Afficher/Masquer</summary>
 
 #### Objectif :
 Le but est de créer une classe `Span` capable de stocker jusqu'à `N` entiers, où `N` est un entier non signé passé au constructeur. Cette classe doit gérer l'ajout de nombres via la méthode `addNumber`, et calculer le plus petit (`shortestSpan`) et le plus grand écart (`longestSpan`) entre ses éléments. Toute tentative d'ajout au-delà de la capacité maximale lève une exception.
@@ -52,6 +62,7 @@ Le but est de créer une classe `Span` capable de stocker jusqu'à `N` entiers, 
 
 Les tests démontrent l'utilisation de `Span` avec des séries de nombres, y compris le cas d'un grand nombre d'éléments (plus de 10 000), pour valider le bon fonctionnement des méthodes d'ajout et de calcul des écarts. Ces tests mettent en évidence la robustesse et l'efficacité de la classe `Span` dans la gestion des ensembles d'entiers et le calcul des écarts, tout en garantissant une gestion d'erreur adéquate grâce à des exceptions personnalisées.
 
+</details>
 
 <br>
 
@@ -60,6 +71,9 @@ Les tests démontrent l'utilisation de `Span` avec des séries de nombres, y com
 <br>
 
 ### Exercice 02 - "Abomination mutante"
+
+<details>
+  <summary>Afficher/Masquer</summary>
 
 #### Objectif :
 L'objectif de cet exercice est de remédier à l'absence d'itérabilité du conteneur `std::stack` en le rendant itérable. Pour ce faire, vous allez implémenter une classe `MutantStack` qui hérite de `std::stack` et lui ajoute des itérateurs.
@@ -79,6 +93,8 @@ L'objectif de cet exercice est de remédier à l'absence d'itérabilité du cont
 - **Comparaison avec `std::list` et `std::vector`** : Pour s'assurer de la conformité du comportement de `MutantStack` avec d'autres conteneurs itérables, des tests similaires sont effectués en utilisant `std::list` et `std::vector`. Ces tests confirment que `MutantStack` se comporte comme attendu en permettant l'itération sur ses éléments.
 
 Cette implémentation enrichit le conteneur `std::stack` en le rendant itérable, tout en préservant ses fonctionnalités originales. Les tests effectués montrent que `MutantStack` peut être utilisé de manière interchangeable avec d'autres conteneurs itérables de la STL, validant ainsi son utilité et sa flexibilité.
+
+</details>
 
 <br>
 
