@@ -1,8 +1,13 @@
-<img src="utils/CPP08.png" width= 100%>
+<img src="git_utils/banner.png" width= 100%>
 
 <br>
 
 ---
+
+<br>
+
+<details>
+<summary>FRENCH VERSION</summary>
 
 ### Exercice 00 - "Easy find"
 
@@ -98,6 +103,108 @@ Cette implémentation enrichit le conteneur `std::stack` en le rendant itérable
 
 <br>
 
+</details>
+
+<br>
+
 ---
 
 <br>
+
+<details>
+<summary>ENGLISH VERSION</summary>
+
+### Exercise 00 - "Easy find"
+
+<details>
+	<summary>Show/Hide</summary>
+
+#### Objective:
+
+The goal is to create a template function `easyfind` that takes a container type `T` of integers and an integer as parameters. This function searches for the first occurrence of the integer in the container. If the occurrence is not found, an exception is thrown or an error value is returned.
+
+#### My Implementation:
+
+[Link here](https://github.com/aceyzz/CPP08/tree/master/ex00)
+
+- **Function `easyfind`**: Implements the search in any container of integers (such as `std::vector` or `std::list`) using the `std::find` algorithm from the STL. If the search fails, it throws a `NotFoundException`.
+
+- **Exception Handling**: Defines a custom exception `NotFoundException` to signal the absence of the searched element in the container.
+
+#### Tests:
+
+- **Test with `std::vector`**: Demonstrates `easyfind` on a `std::vector` of integers, showcasing the function's ability to find or not find the specified element.
+
+- **Test with `std::list`**: Uses `easyfind` on a `std::list` of integers, demonstrating the function's flexibility with different container types.
+
+These tests validate the correct functionality of `easyfind`, capable of efficiently handling searches in various integer containers and properly signaling when an element is not found.
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+### Exercise 01 - "Span"
+
+<details>
+	<summary>Show/Hide</summary>
+
+#### Objective:
+The goal is to create a class `Span` capable of storing up to `N` integers, where `N` is an unsigned integer passed to the constructor. This class must handle adding numbers via the `addNumber` method and calculate the smallest (`shortestSpan`) and largest span (`longestSpan`) between its elements. Any attempt to add beyond the maximum capacity raises an exception.
+
+#### My Implementation:
+
+[Link here](https://github.com/aceyzz/CPP08/tree/master/ex01)
+
+- **Capacity Management**: The `Span` class uses a `std::set` to store numbers uniquely and in sorted order, with a maximum capacity defined at construction.
+
+- **Adding Elements**: The `addNumber` method allows adding an element to the `Span`. An overload of this method accepts a range of iterators to add multiple elements simultaneously, improving the class's flexibility and efficiency.
+
+- **Span Calculations**: The `shortestSpan` and `longestSpan` methods calculate the smallest and largest spans between the elements of the `Span`, respectively. If the `Span` contains fewer than two elements, an exception is raised to indicate that no span can be calculated.
+
+- **Exception Handling**: Two types of custom exceptions are defined to handle specific error cases: `MaxCapacityException` for attempts to add beyond the maximum capacity, and `InvalidSpanException` for attempts to calculate spans in an insufficiently filled `Span`.
+
+#### Tests:
+
+The tests demonstrate the use of `Span` with series of numbers, including the case of a large number of elements (more than 10,000), to validate the proper functioning of the addition and span calculation methods. These tests highlight the robustness and efficiency of the `Span` class in managing sets of integers and calculating spans while ensuring proper error handling through custom exceptions.
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+### Exercise 02 - "Mutant Abomination"
+
+<details>
+	<summary>Show/Hide</summary>
+
+#### Objective:
+The objective of this exercise is to address the lack of iterability in the `std::stack` container by making it iterable. To achieve this, you will implement a `MutantStack` class that inherits from `std::stack` and adds iterators to it.
+
+#### My Implementation:
+
+[Link here](https://github.com/aceyzz/CPP08/tree/master/ex02)
+
+- **Class `MutantStack`**: Inherits from `std::stack` and offers all its member functionalities. Additionally, `MutantStack` introduces the ability to iterate over its elements using typical STL container iterators.
+
+- **Iterators**: The class provides `iterator` and `const_iterator` types, enabling iteration over the `MutantStack` both for reading and writing. These iterators are obtained via the `begin`, `end`, `cbegin`, and `cend` members.
+
+#### Tests:
+
+- **Using `MutantStack`**: The class is tested by adding elements and then iterating over them using the provided iterators. This test demonstrates adding, removing, and accessing elements in the stack.
+
+- **Comparison with `std::list` and `std::vector`**: To ensure the behavior of `MutantStack` aligns with other iterable containers, similar tests are performed using `std::list` and `std::vector`. These tests confirm that `MutantStack` behaves as expected, allowing iteration over its elements.
+
+This implementation enhances the `std::stack` container by making it iterable while preserving its original functionalities. The conducted tests show that `MutantStack` can be used interchangeably with other iterable STL containers, validating its utility and flexibility.
+
+</details>
+
+<br>
+
+</details>
